@@ -1,7 +1,0 @@
-FROM debian
-
-COPY ./pc2-benchmark/c++
-
-WORKDIR /pc2-benchmark/c++
-
-CMD ["gcc","soluc.cpp"]
