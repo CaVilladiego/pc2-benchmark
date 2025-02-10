@@ -44,7 +44,7 @@ int main() {
     // Save execution time to file
     FILE* file = fopen("/app/output/time.txt", "w");
     if (file != NULL) {
-        fprintf(file, "%lld µs\n", time_taken);
+        fprintf(file, "C: %lld µs\n", time_taken);
         fclose(file);
     }
 
