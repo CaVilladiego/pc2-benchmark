@@ -1,1 +1,14 @@
+# Use an official C++ image
+FROM gcc:latest
 
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the C++ source file into the container
+COPY soluc.c .
+
+# Compile the C++ program
+RUN gcc -O2 -o soluc soluc.c
+
+# Command to run the program
+CMD ["./soluc"]

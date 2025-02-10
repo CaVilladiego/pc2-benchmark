@@ -1,0 +1,15 @@
+# Use the official Node.js image
+FROM node:latest
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and install dependencies (if needed)
+RUN npm install || true  # Ignore errors if no dependencies
+
+# Copy the Node.js source file into the container
+COPY soluc.js . 
+
+# Command to run the Node.js program
+CMD ["node", "soluc.js"]
+
