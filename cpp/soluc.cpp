@@ -42,7 +42,7 @@ int main() {
     // Save execution time to file
     ofstream file("/app/output/time.txt");
     if (file.is_open()) {
-        file << duration.count() << " µs" << endl;
+        file << "cpp:" << duration.count() << " µs" << endl;
         file.close();
     }
 
